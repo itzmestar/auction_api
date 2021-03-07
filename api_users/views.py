@@ -1,15 +1,14 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
-
+from auction_system import settings
 import requests
 
 from .serializers import CreateUserSerializer
 
 
-CLIENT_ID = 'BAQLMg7I3ZyOFGtKW5hHpmLKQRxljRSOawHxWPEI'
-CLIENT_SECRET = '3MT2fbPV74LE5B6kRScaMc6eyePk96jbN6fzKreVNU96oJh7gGxa7QOTEx7pDIq8w4DiNgbvemTak4z124c0vsQsvYeACAmKZhjGjliQRRkX85RDxuB6ORWg6kxzcBUu'
-
+CLIENT_ID = settings.CLIENT_ID
+CLIENT_SECRET = settings.CLIENT_SECRET
 
 IP_token = 'http://127.0.0.1:8000/o/token/'
 IP_revoke_token ='http://127.0.0.1:8000/o/revoke_token/'

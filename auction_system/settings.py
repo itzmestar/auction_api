@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CLIENT_ID = 'BAQLMg7I3ZyOFGtKW5hHpmLKQRxljRSOawHxWPEI'
+CLIENT_SECRET = '3MT2fbPV74LE5B6kRScaMc6eyePk96jbN6fzKreVNU96oJh7gGxa7QOTEx7pDIq8w4DiNgbvemTak4z124c0vsQsvYeACAmKZhjGjliQRRkX85RDxuB6ORWg6kxzcBUu'
 
 # Application definition
 
