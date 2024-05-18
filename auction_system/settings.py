@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'oauth2_provider', # The OAuth2
-    'rest_framework', # The REST API
-    'api_users', # user's app
-    'auction_api', # auctions app
+    'oauth2_provider',  # The OAuth2
+    'rest_framework',  # The REST API
+    'api_users',  # user's app
+    'auction_api',  # auctions app
+    'drf_yasg',  # swagger docs
 ]
 
 MIDDLEWARE = [
