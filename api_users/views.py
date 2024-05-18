@@ -19,7 +19,7 @@ IP_revoke_token ='http://127.0.0.1:8000/o/revoke_token/'
 def register(request):
     '''
     Registers user to the server. Input should be in the format:
-    {"username": "username", "password": "1234abcd"}
+    {"username": "xyz", "password": "1234abcd"}
     '''
     # Put the data from the request into the serializer
     serializer = CreateUserSerializer(data=request.data)
@@ -47,8 +47,8 @@ def register(request):
 @permission_classes([AllowAny])
 def token(request):
     '''
-    Gets tokens with username and password. Input should be in the format:
-    {"username": "username", "password": "1234abcd"}
+    Get token with username and password from server. Input should be in the format:
+    {"username": "xyz", "password": "1234abcd"}
     '''
     r = requests.post(
     IP_token,
@@ -68,7 +68,7 @@ def token(request):
 @permission_classes([AllowAny])
 def refresh_token(request):
     '''
-    Registers user to the server. Input should be in the format:
+    Refreshes the token from the server. Input should be in the format:
     {"refresh_token": "<token>"}
     '''
     r = requests.post(
@@ -87,7 +87,7 @@ def refresh_token(request):
 @permission_classes([AllowAny])
 def revoke_token(request):
     '''
-    Method to revoke tokens.
+    Method to revoke token.  Input should be in the format:
     {"token": "<token>"}
     '''
     r = requests.post(
